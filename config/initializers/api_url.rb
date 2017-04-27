@@ -1,0 +1,1 @@
+API_URLS = YAML.load_file("#{Rails.root.to_s}/config/api_url.yml")[Rails.env]
