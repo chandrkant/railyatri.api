@@ -40,6 +40,7 @@ production:
   live_arr_dep: https://livestatus.railyatri.in/api/train_at_station/
   train_bw_station: https://api.railyatri.in/api/trains-between-station.json
   runing_status: https://livestatus.railyatri.in/api/train_eta_data/
+  update_platform: http://test.railyatri.in/instant_platform_update.json
 
 test:
   pnr_search:  http://pnrstage.railyatri.in/api/pnr/journey/
@@ -82,6 +83,7 @@ test:
   live_arr_dep: https://livestatus.railyatri.in/api/train_at_station/
   train_bw_station: http://test.railyatri.in/api/trains-between-station.json
   runing_status: https://livestatus.railyatri.in/api/train_eta_data/
+  update_platform: http://test.railyatri.in/instant_platform_update.json
 
 development:
   pnr_search:  http://pnrstage.railyatri.in/api/pnr/journey/
@@ -125,3 +127,4 @@ development:
   live_arr_dep: https://livestatus.railyatri.in/api/train_at_station/
   train_bw_station: http://test.railyatri.in/api/trains-between-station.json
   runing_status: https://livestatus.railyatri.in/api/train_eta_data/
+  update_platform: http://test.railyatri.in/instant_platform_update.json

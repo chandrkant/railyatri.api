@@ -42,4 +42,10 @@ class Api::TrainController < ApplicationController
   	
   end
 
+  #POST /api/instant_platform_update
+  def instant_platform_update
+  	url = API_URLS['update_platform']
+		req = RestClient.post url, params.to_json, {content_type: :json, accept: :json}
+		json_response(req)	
+  end
 end

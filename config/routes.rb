@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   	get "/pnr_status"=>"train#pnr_status"
   	get "/live_train_status"=>"train#live_train_status"
   	get "/seat_availability"=>"train#seat_availability"
+    post "/instant_platform_update"=>"train#instant_platform_update"
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
