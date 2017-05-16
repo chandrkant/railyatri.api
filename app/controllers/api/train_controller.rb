@@ -2,14 +2,24 @@
 class Api::TrainController < ApplicationController
 	#GET /api/time_table
 	def time_table
-		url = API_URLS['time_table']+"#{params[:train_number]}.json?stop=true"
-		req = RestClient.get(url)
-		json_response(req)
+		begin
+		 result ={}
+	   url = API_URLS['time_table']+"#{params[:train_number]}.json?stop=true"
+		 req = RestClient.get(url)
+		 json_response(req)
+		rescue Exception => e
+			result['success']=false
+			result['message']=e
+		 	json_response(result)
+		end
+		
 	end
 
   #GET /api/live_arr_dep
 	def live_arr_dep
-		url = API_URLS['live_arr_dep']
+		begin
+		 result ={}
+		 url = API_URLS['live_arr_dep']
 		if params[:to_code].present?
 			url = url+"#{params[:from_code]}/#{params[:to_code]}/8.json"
 		else
@@ -17,6 +27,12 @@ class Api::TrainController < ApplicationController
 		end	
 		req = RestClient.get(url)
 		json_response(req)
+		rescue Exception => e
+			result['success']=false
+			result['message']=e
+		 	json_response(result)
+		end
+		
 	end
 
   #GET /api/train_bw_station
