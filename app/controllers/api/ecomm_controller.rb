@@ -12,12 +12,13 @@ class Api::EcommController < ApplicationController
 		begin
 			qury = "?source="+params[:from_code]+"&destination="+params[:to_code]+"&doj="+params[:doj]+"&num_of_pass="+params[:num_of_pass]
 			url=  API_URLS['get_available_bus_trips']+qury
-			puts "#{url}"
+			logger.info( "=====================================>#{url}")
 			new_hash = params
 			from_name = params[:from_name].split('-to-')[0].titleize
 			to_name = params[:from_name].split('-to-')[1].titleize
 			city = {from_name: from_name,to_name: to_name}
 			params = new_hash.merge(city)
+			logger.info("=============================================>#{params}")
 			req = RestClient.get(url)
 			logger.info(req)
 			req = params.merge(JSON.parse(req.body))

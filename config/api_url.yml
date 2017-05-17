@@ -1,4 +1,4 @@
-
+development:
   pnr_search:  https://pnrstage.railyatri.in/api/pnr/journey/
   food_option: https://test.railyatri.in/ecomm/all-vendors-based-on-a-train.json
   opt_food_option: https://test.railyatri.in/ecomm/display-all-stations-for-food.json
@@ -41,3 +41,46 @@
   train_bw_station: https://test.railyatri.in/api/trains-between-station.json
   runing_status: httpss://livestatus.railyatri.in/api/train_eta_data/
   update_platform: https://test.railyatri.in/instant_platform_update.json
+prduction:
+    pnr_search:  https://pnrstage.railyatri.in/api/pnr/journey/
+    food_option: https://test.railyatri.in/ecomm/all-vendors-based-on-a-train.json
+    opt_food_option: https://test.railyatri.in/ecomm/display-all-stations-for-food.json
+    update_order_status: https://test.railyatri.in/ecomm/get-and-update-order-status/
+    update_user_email: https://test.railyatri.in/ecomm/update-customer-email
+    save_order: https://test.railyatri.in/ecomm/save_order.json
+    user_wallet: https://test.railyatri.in//user_wallets/get_wallet_balance.json
+    user_wallet_detail: https://test.railyatri.in/user_wallets/get_user_wallet_details
+    user_points: https://test.railyatri.in/get_user_point_details.json
+    save_payment: https://test.railyatri.in/ecomm/ry-web-create-payment-details.json
+    get_order_details: https://test.railyatri.in/ecomm/get-order-details/
+    block_ticket_url: https://test.railyatri.in/redbus/block-passenger-ticket.json
+    confirm_ticket_status: https://test.railyatri.in/web-confirm-ticket
+    city_list_url: https://test.railyatri.in/redbus/source-city-list.json
+    get_available_bus_trips: https://test.railyatri.in/redbus/get-available-trips.json
+    get_trip_details: https://test.railyatri.in/redbus/get-trip-details
+    pay_by_wallet: https://test.railyatri.in/citrushcheckout/pay_by_wallet
+    api_base_url: https://test.railyatri.in
+    send_invoice_mail: https://test.railyatri.in/citrushcheckout/send-invoice-mail
+    online_to_cod: https://test.railyatri.in/ecomm/verify-online-to-cod-order.json?
+    coupon_list: https://test.railyatri.in/ecomm/get-coupon.json
+    coupon_apply: https://test.railyatri.in//ecomm/coupon-discount-info.json?
+    coach_position: https://test.railyatri.in/api/coach_position/
+    food_stations: https://test.railyatri.in/ecomm/food-active-stations.json
+    menu_at_stations: https://test.railyatri.in/ecomm/all-menu-in-a-station.json?
+    validate_stations: https://test.railyatri.in/ecomm/station-validation-and-create-journey.json?
+    generate_bill: httpss://payment-test.railyatri.in/citrus/generate_bill?
+    return_url: https://payment-test.railyatri.in/hook/get-payment
+    cashback_configuration: https://test.railyatri.in/cashback-configuration
+    cashback_calculation: https://test.railyatri.in/get-cashback-calculation-for_bus.json?
+    get_bus_coupon: https://test.railyatri.in/ecomm/get-coupon.json?ecomm_type=1
+    trip_detail: https://test.railyatri.in/redbus/bus-trip-detail.json?bus_trip_id=
+    list_agents: https://trainticketapi-stage.railyatri.in/api/train-ticket/list-agents?
+    paytm_return_url: https://payment-test.railyatri.in/return-url
+    generate_checksum: https://payment-test.railyatri.in/generate-checksum?payment_provider=
+    virtual_journey: https://test.railyatri.in//ecomm/create-journey-for-food.json
+    validate_order: https://test.railyatri.in/ecomm/api/validate-ecomm-cancellation?
+    time_table: https://test.railyatri.in/m/schedule/
+    live_arr_dep: httpss://livestatus.railyatri.in/api/train_at_station/
+    train_bw_station: https://test.railyatri.in/api/trains-between-station.json
+    runing_status: httpss://livestatus.railyatri.in/api/train_eta_data/
+    update_platform: https://test.railyatri.in/instant_platform_update.json
