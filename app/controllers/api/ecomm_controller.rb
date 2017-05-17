@@ -19,6 +19,7 @@ class Api::EcommController < ApplicationController
 			city = {from_name: from_name,to_name: to_name}
 			params = new_hash.merge(city)
 			req = RestClient.get(url)
+			logger.info(req)
 			req = params.merge(JSON.parse(req.body))
 		rescue Exception=> e
 			req= {success: false,message: e.message}
