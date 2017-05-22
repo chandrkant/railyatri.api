@@ -40,6 +40,7 @@ GEM
       tzinfo (~> 1.1)
     arel (7.1.4)
     bcrypt (3.1.11)
+    brakeman (3.6.2)
     builder (3.2.3)
     byebug (9.0.6)
     concurrent-ruby (1.0.5)
@@ -177,6 +178,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  brakeman
   byebug
   database_cleaner
   devise
@@ -194,6 +196,9 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
+
+RUBY VERSION
+   ruby 2.3.1p112
 
 BUNDLED WITH
    1.13.3

@@ -9,8 +9,8 @@ class Api::EcommController < ApplicationController
 
 	end
 	def bus_search
-		# begin
-			qury = "?source="+params[:from_code]+"&destination="+params[:to_code]+"&doj="+params[:doj]+"&num_of_pass="+params[:num_of_pass]
+		begin
+			qury = "source="+params[:from_code]+"&destination="+params[:to_code]+"&doj="+params[:doj]+"&num_of_pass="+params[:num_of_pass]
 			# url=  API_URLS['get_available_bus_trips']+qury
 			url = "https://test.railyatri.in/redbus/get-available-trips.json?"+qury
 			logger.debug( "=====================================>#{url}")
@@ -23,9 +23,9 @@ class Api::EcommController < ApplicationController
 			req = RestClient.get(url)
 			# logger.debug(req)
 			req = params.merge(JSON.parse(req.body))
-		# rescue Exception=> e
-		# 	req= {success: false,message: e.message}
-		# end
+		rescue Exception=> e
+			req= {success: false,message: e.message}
+		end
 		json_response(req.to_json)
 	end
 end
