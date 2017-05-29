@@ -43,10 +43,10 @@ class Api::TrainController < ApplicationController
 		json_response(req)
 	end
 
-  #GET /api/train_bw_station
+  #POST /api/pnr_status
 	def pnr_status
 		url = "http://www.indianrail.gov.in/enquiry/CommonCaptcha?inputCaptcha=815&inputPnrNo=2331935184&inputPage=PNR"
-		req = RestClient.get url
+		req = RestClient.get params[:url]
 		json_response(req)
 	end
 
