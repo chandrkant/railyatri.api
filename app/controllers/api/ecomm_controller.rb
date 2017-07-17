@@ -28,4 +28,18 @@ class Api::EcommController < ApplicationController
 		end
 		json_response(req.to_json)
 	end
+	def get_trip_details
+		# begin
+		  qury = "trip_id="+params[:trip_id]+"&operator_id="+params[:operator_id]+"&no_of_passengers="+params[:num_of_pass]
+			# url=  API_URLS['get_available_bus_trips']+qury
+			url = "https://test.railyatri.in/redbus/get-trip-details?"+qury
+			logger.debug("=============================================>#{url}")
+			req = RestClient.get(url)
+			logger.debug(req)
+			result = Bus.seat_layout (JSON.parse req)
+		# rescue Exception=> e
+			# result = {success: false,message: e.message}
+		# end
+		json_response(result.to_json)
+	end
 end

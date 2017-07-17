@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  use_doorkeeper
   devise_for :users
   namespace :api do
   	get "/time_table/:train_number"=>"train#time_table"
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   	get "/seat_availability"=>"train#seat_availability"
     post "/instant_platform_update"=>"train#instant_platform_update"
     get "/bus/get_available_bus_trips"=>"ecomm#bus_search"
+    get "/bus/get_trip_details"=>"ecomm#get_trip_details"
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
